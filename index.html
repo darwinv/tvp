@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html><!--HTML5 doctype-->
+
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta http-equiv="Pragma" content="no-cache">
+<script type="text/javascript" charset="utf-8" src="intelxdk.js"></script>
+<script src="cordova.js"></script>
+<script src="xhr.js"></script>
+<script type="text/javascript" language="javascript">
+    // This event handler is fired once the intel libraries are ready
+    function onDeviceReady() {
+        //hide splash screen now that our app is ready to run
+        intel.xdk.device.hideSplashScreen();
+        setTimeout(function () {
+            $.ui.launch();
+        }, 50);
+    }
+    //initial event handler to detect when intel is ready to roll
+    document.addEventListener("intel.xdk.device.ready", onDeviceReady, false);
+</script>
+<script src="js/appframework.ui.min.js"></script>
+<script>
+    $.ui.autoLaunch = false;
+    $.ui.useOSThemes = true; //Change this to false to force a device theme
+    $.ui.blockPageScroll();
+    $(document).ready(function () {
+        if ($.ui.useOSThemes && !$.os.ios && $("#afui").get(0).className !== "ios")
+            $("#afui").removeClass("ios");
+    });
+</script>
+<link href="css/icons.css" rel="stylesheet" type="text/css">
+<link href="css/af.ui.css" rel="stylesheet" type="text/css">
+</head>
+
+<div id="afui" class="ios">
+    <div id="header" class="header"></div>
+    <div id="content" style="">
+        <div class="panel" title="Home" id="home" selected="selected" style="padding: 10px; text-align: justify;"
+        data-appbuilder-object="page" data-footer="footer_16" data-header="header_0">
+
+
+
+            <div class="container" style="width: 100%; height: 100%; position: relative; z-index: 0;"
+            data-appbuilder-object="container">
+
+
+
+                <img src="images/tvp.jpg" style="width: 100%; height: 45%;" alt="Title" data-appbuilder-object="image"
+                class="" title="tvp">
+                <ul class="list" data-appbuilder-object="list" style="">
+                    <li><a href="#page_1">Acerca del Proyecto</a>
+                    </li>
+                    <li><a href="#page_8"> Tecnologías</a>
+                    </li>
+                    <li><a href="#page_15">Documentales</a>
+                    </li>
+                    <li><a href="#page_18">Redes Sociales</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="panel" title="Acerca de" id="page_1" data-appbuilder-object="page"
+        style="" data-footer="footer_15">
+
+
+            <div class="container" style="width: 100%; height: 100%;" data-appbuilder-object="container">
+                <img src="images/images.jpeg" style="width: 100%; height: 45%;" alt="Title" data-appbuilder-object="image"
+                class="" title="Proyecto Venus">
+                <ul class="list" data-appbuilder-object="list" style="">
+                    <li><a href="#page_2">Introducción</a>
+                    </li>
+                    <li><a href="#page_3">Economía Basada en Recursos</a>
+                    </li>
+                    <li><a href="#page_4">Metas y Propuestas </a>
+                    </li>
+                    <li><a href="#page_5">Jacque Fresco</a>
+                    </li>
+                    <li><a href="#page_6"> Roxxane Meadows</a>
+                    </li>
+                    <li><a href="#page_7">Centro de Investigaciones</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="panel" title="Introducción" id="page_2" data-appbuilder-object="page"
+        style="text-align: center;" data-footer="footer_1" data-header="header_0">
+
+            <div class="container" style="width: 100%; height: 100%;" data-appbuilder-object="container">
+
+                <div class="text_item" data-appbuilder-object="text" style="text-align: justify; padding: 10px;">
+                    <h2 style="text-align:center;"> Introducción </h2>
+                    <br>El Proyecto Venus es una organización que propone un plan de
+                    acción factible para el cambio social, que trabaja en pro de
+                    una civilización global pacífica y sostenible. En él se esbozan
+                    una alternativa a esforzarse donde los derechos humanos ya
+                    no son proclamaciones de papel, sino una forma de vida.
+                    <br>
+                    <br>Cuando se tiene en cuenta la magnitud de los desafíos que enfrenta
+                    la sociedad hoy en día, podemos concluir con seguridad que
+                    el tiempo es desde hace mucho tiempo para que podamos volver
+                    a examinar nuestros valores y para reflexionar y evaluar algunas
+                    de las cuestiones subyacentes y las suposiciones que tenemos
+                    como sociedad. Este auto-análisis pone en cuestión la naturaleza
+                    misma de lo que significa ser humano, lo que significa ser
+                    miembro de una "civilización", y qué opciones podemos hacer
+                    hoy para asegurar un futuro próspero para todos los pueblos
+                    del mundo
+                    <br>
+                    <br>La experiencia nos dice que el comportamiento humano puede
+                    ser modificado, ya sea hacia la actividad constructiva o destructiva.
+                    De esto es lo que se trata el Proyecto Venus -la dirección
+                    de nuestra tecnología y recursos hacia lo positivo, para el
+                    máximo beneficio de las personas y el planeta, la búsqueda
+                    de nuevas formas de pensar y de vivir que enfatiza y celebra
+                    el gran potencial del espíritu humano. Tenemos las herramientas
+                    a la mano para diseñar y construir un futuro digno del potencial
+                    humano. El Proyecto Venus presenta una audaz nueva dirección
+                    para la humanidad que implica nada menos que el total rediseño
+                    de nuestra cultura. La responsabilidad de nuestro futuro está
+                    en nuestras manos, y depende de las decisiones que tomemos
+                    hoy. El mayor recurso que tenemos hoy día es nuestro propio
+                    ingenio
+                </div>
+
+                <img src="images/venus.jpg" style="width: 100%; margin-top: 10%;" alt="Title" data-appbuilder-object="image"
+                class="" title="">
+                <div class="text_item" data-appbuilder-object="text" style="text-align: justify; padding: 10px;">
+                    <br>
+                    <br>El Proyecto Venus aboga por una visión alternativa de una nueva
+                    civilización mundial sostenible, a diferencia de cualquier
+                    sistema social que se halla inventado antes. Aunque esta descripción
+                    está muy condensada, se basa en años de estudio e investigación
+                    experimental por muchas, muchas personas de muchas disciplinas
+                    científicas.
+                    <br>
+                    <br>Proponemos un enfoque holístico y fresco, uno que se dedica
+                    a las preocupaciones humanas y ambientales. Es una visión alcanzable
+                    de un futuro brillante y mejor, una que sea adecuada a los
+                    tiempos en que vivimos, y la vez práctico y factible para un
+                    futuro positivo para todos los pueblos del mundo.
+                    <br>
+                    <br>El Proyecto Venus aboga por un enfoque directo para el rediseño
+                    de una cultura en la que las antiguas deficiencias de la guerra,
+                    la pobreza, el hambre, la deuda, la degradación ambiental y
+                    el sufrimiento humano innecesario son vistos no sólo como evitables,
+                    sino como totalmente inaceptables.
+                    <br>
+                    <br>Una de las premisas básicas del Proyecto Venus es que trabajamos
+                    para tener todos los recursos de la Tierra como patrimonio
+                    común de todos los pueblos del mundo. Cualquier otra cosa será
+                    simplemente dar lugar a una continuación del mismo catálogo
+                    de problemas inherentes al sistema actual.
+                </div>
+            </div>
+        </div>
+        <div class="panel" title="E.B.R" id="page_3" data-appbuilder-object="page" style=""
+        data-footer="footer_3" data-header="header_0">
+
+
+            <div class="container" style="width: 100%; height: 100%; position: relative; z-index: 0;"
+            data-appbuilder-object="container">
+                <img src="images/ebr.jpg" style="width: 100%; height: 60%;" alt="Title" data-appbuilder-object="image"
+                class="" title="">
+                <div class="text_item" data-appbuilder-object="text" style="text-align: justify; padding: 10px;">
+                    <br>
+                    <h2 style="text-align:center;">Economía Basada en Recursos</h2>
+                    <br>Se trata de un sistema socio-económico global en el que todos
+                    los bienes y servicios están disponibles sin el uso de dinero,
+                    créditos, trueque o cualquier otro sistema de deuda o servidumbre.
+                    Todos los recursos se convierten en patrimonio común de todos
+                    los habitantes, no sólo a unos pocos elegidos. La premisa sobre
+                    la que se basa este sistema es que la Tierra es abundante con
+                    recursos abundantes, nuestra práctica de racionar los recursos
+                    a través de métodos monetarios es irrelevante y contraproducente
+                    para nuestra supervivencia.
+                    <br>
+                    <br>La sociedad moderna tiene acceso a una tecnología muy avanzada
+                    y puede proporcionar alimentos, ropa, vivienda y atención médica,
+                    actualizar nuestro sistema educativo y desarrollar un suministro
+                    ilimitado de energías renovables no contaminantes. Mediante
+                    el suministro de una economía diseñada de manera eficiente,
+                    todo el mundo puede disfrutar de un alto nivel de vida con
+                    todas las comodidades de una sociedad de alta tecnología. Una
+                    economía basada en recursos utiliza los recursos de la tierra
+                    y el mar, el equipo físico y plantas industriales, con la finalidad
+                    de mejorar las vidas las personas.
+
+                    <br>
+                    <br>Todos los sistemas sociales, sin importar su filosofía, política,
+                    creencias religiosas o costumbres sociales, dependen a fin
+                    de cuentas de los recursos naturales, incluyendo aire y agua
+                    limpios, tierra cultivable, y la tecnología y el personal para
+                    mantener un nivel alto de vida. Esto puede &nbsp; &nbsp;Todos
+                    los sistemas sociales, sin importar su filosofía, política,
+                    creencias religiosas o costumbres sociales, dependen a fin
+                    de cuentas de los recursos naturales, incluyendo aire y agua
+                    limpios, tierra cultivable, y la tecnología y el personal para
+                    mantener un nivel alto de vida. Esto puede &nbsp;lograrse mediante
+                    la aplicación inteligente y humanitaria de la ciencia y la
+                    tecnología. La verdadera riqueza de cualquier nación yace en
+                    sus recursos desarrollados y potenciales, y en la gente que
+                    trabaja por la eliminación de la escasez y la creación de una
+                    sociedad ograrse mediante la aplicación inteligente y humanitaria
+                    de la ciencia y la tecnología. La verdadera riqueza de cualquier
+                    nación yace en sus recursos desarrollados y potenciales, y
+                    en la gente que trabaja por la eliminación de la escasez y
+                    la creación de una sociedad más humanitaria. El uso de sistemas
+                    computarizados a gran escala nos servirá para definir los parámetros
+                    de una economía basada en recursos, y todos los proyectos de
+                    construcción se conformaran a los requisitos ambientales. humanitaria.
+                    El uso de sistemas computarizados a gran escala nos servirá
+                    para definir los parámetros de una economía basada en recursos,
+                    y todos los proyectos de construcción se conformaran a los
+                    requisitos ambientales.
+                    <br>
+                    <br>Esta vision de globalización otorga poder a cada persona en
+                    el planeta para ser lo mejor que pueda ser, y no vivir subyugada
+                    a un cuerpo corporativo gobernante. En una economía basada
+                    en recursos, los recursos del mundo se consideran patrimonio
+                    común de todos los pueblos del mundo, superando poco a poco
+                    la necesidad de barreras artificiales que separan a la gente.</div>
+                <img src="images/rbe.jpg" style="width: 100%; height: 45%; margin-top: 10px;" alt="Title"
+                data-appbuilder-object="image" class="" title="">
+
+
+
+            </div>
+
+            <div class="container" style="width: 100%; height: 100%; z-index: 0; position: relative;"
+            data-appbuilder-object="container"></div>
+        </div>
+
+
+
+
+
+        <div class="panel" title="Metas y Propuestas" id="page_4" data-appbuilder-object="page"
+        style="" data-footer="footer_4" data-header="header_0">
+
+
+            <div class="container" style="width: 100%; height: 100%;" data-appbuilder-object="container">
+                <img src="images/better.jpg" style="width: 100%; height: 50%;" alt="Title" data-appbuilder-object="image"
+                class="" title="metas">
+                <div class="text_item" data-appbuilder-object="text" style="text-align: justify; padding: 10px;">
+                    <h2 style="text-align:center;">Metas y Propuestas </h2>
+                    Es común ver en los grandes medios de comunicación leer y escuchar comentarios
+                    acerca de la cantidad de problemas sociales que enfrentamos
+                    hoy, como calentamiento global, destrucción del medio-ambiente,
+                    desempleo, crimen, violencia, pobreza, hambre, crecimiento
+                    de la población. Aun así, cuan seguido escuchamos de planes
+                    factibles para aliviar muchos de estos problemas sociales?
+                    Es relativamente simple para la gente criticar la sociedad,
+                    sin embargo es mucho más difícil identificar e implementar
+                    planes para resolver problemas
+
+                    <br>
+                    <br>Los planes del Proyecto Venus, ofrecen a la sociedad un espectro
+                    más amplio de elecciones basadas en el método cientifico, dirigidos
+                    hacia una nueva era de paz y sostenibilidad para todos. A traves
+                    de la implementación de una economía basada en recursos, y
+                    una multitud de tecnologías innovadoras y amigables con el
+                    medio-ambiente directamente aplicadas al sistema social. Las
+                    propuestas del Proyecto Venus reducirán dramaticamente, el
+                    crimen, pobreza, hambre, falta de vivienda, y muchos otros
+                    problemas urgentes que son comunes en todo el mundo actualmente.
+                    <br>
+                    <br>El Proyecto Venus propone un sistema en el que la automatización
+                    y la tecnología se integrarán de forma inteligente en un diseño
+                    socio-económico integral global donde la función principal
+                    sería la de maximizar la calidad de vida en lugar de ganancias.
+                    Este proyecto también introduce un conjunto de valores prácticos
+                    y factibles.
+
+                    <br>
+                    <br>
+                    <h3 style="text-align:center;"> Primera Fase </h3>
+                    <br>La primera fase de los planes a largo plazo del Proyecto Venus
+                    ya está en marcha. Jacque Fresco, futurista, inventor, diseñador
+                    industrial y fundador del Proyecto Venus y su socio Roxanne
+                    Meadows han terminado la construcción de un centro de investigación
+                    de 25 acres en Venus, Florida para ayudar a presentar las propuestas
+                    del Proyecto Venus. Vídeos, CD's, carteles, folletos, maquetas,
+                    renders y libros como "Lo mejor que el dinero no puede comprar:
+                    más allá de la política, la pobreza y la guerra", se han creado
+                    para ayudar a crear conciencia acerca de este proyecto y sus
+                    muchas propuestas.
+
+                    <br>
+                    <br>
+                    <h3 style="text-align:center;">Segunda Fase </h3>
+                    <br>La segunda fase incluye la producción de una película de largometraje
+                    que describir a cómo un mundo que aborda las propuestas presentadas
+                    por el Proyecto Venus funcionaría. Esta película va a dar una
+                    visión positiva de una sociedad pacífica en la que todos los
+                    seres humanos forman una familia global en el planeta Tierra.
+                    Una civilización en la que todas las personas se dedican a
+                    la búsqueda de una mejor comprensión del mundo que comparten.
+                    Esta película ha sido diseñado para ser una experiencia entretenida
+                    y educativa para niños y adultos.
+
+                    <br>
+                    <br>
+                    <h3 style="text-align:center;"> Tercera Fase</h3>
+                    <br>Para probar sus diseños y propuestas, el Proyecto Venus está
+                    trabajando para poner sus ideales en práctica por la construcción
+                    de una ciudad experimental de investigación. Dentro de la ciudad
+                    experimental, un parque temático también está previsto ambos
+                    podran tanto entretener e informar a los visitantes acerca
+                    de las posibilidades de los estilos de vida dignas y respetuosas
+                    al medio-ambiente previstas por el Proyecto Venus.
+                    <br>
+                    <br>Una ciudad circular sería una fase de transición y podría evolucionar
+                    a partir de una sociedad orientada al dinero semi-cooperativa
+                    a una economía basada en recursos. Este podría ser el prototipo
+                    de una serie de ciudades que se construirán en varios lugares
+                    en todo el mundo. El ritmo de avance dependerá de la disponibilidad
+                    de los fondos recaudados durante las primeras etapas y las
+                    personas que se identifican en participar y apoyar los objetivos
+                    y la dirección del Proyecto Venus.
+                    <br>
+                    <br>El Proyecto Venus no es ni utópico ni orwelliano, ni refleja
+                    los sueños de idealistas poco prácticos. En cambio, presenta
+                    metas alcanzables que sólo requiere la aplicación inteligente
+                    de lo que ya sabemos. Las únicas limitaciones son las que nos
+                    imponemos a nosotros mismo</div>
+            </div>
+        </div>
+        <div class="panel" title="Jacque Fresco" id="page_5" data-appbuilder-object="page"
+        style="" data-footer="footer_5" data-header="header_0">
+
+            <div class="container" style="width: 100%; height: 100%;" data-appbuilder-object="container">
+                <img src="images/Jacque-Fresco-Venus-Project.jpg" style="width: 100%; height: 55%;"
+                alt="Title" data-appbuilder-object="image" class="" title="jacq">
+                <div class="text_item" data-appbuilder-object="text" style="text-align: justify; padding: 10px;">
+                    <h2 style="text-align:center;"> Jacque Fresco </h2>
+                    La experiencia del Sr. Fresco incluye el diseño industrial y la ingeniería social,
+                    además de ser un precursor en el campo de los factores humanos.
+                    Sr. Fresco ha trabajado como diseñador e inventor en una amplia
+                    gama de campos que abarcan desde las innovaciones biomédicas
+                    a sistemas sociales totalmente integrados.
+                    <br>
+                    <br>El Proyecto Venus refleja la culminación del trabajo de toda
+                    una vida del Sr. Fresco: la integración de lo mejor de la ciencia
+                    y la tecnología en un plan integral para una nueva sociedad
+                    basada en la preocupación humana y del medio ambiente. Su visión
+                    optimista y su deseo de crear soluciones que beneficien al
+                    máximo a la mayor cantidad de gente posible provienen de su
+                    experiencia durante la Gran Depresión de 1929.
+                    <br>
+                    <br>
+
+                    <h3 style="text-align:center;"> Experiencia Profesional </h3>
+                    <br>
+                    <ul>
+                        <li>-Consultor en diseño para la Compañía de Helicópteros Rotor
+                            Craf
+                        </li>
+                        <br>
+                        <li>-Ingeniero de Investigación. Raymond De-Icer Corp., Los
+                            Angeles, California
+                        </li>
+                        <br>
+                        <li>-Colega y socio de Donal Powell Wilson, el prestigioso
+                            psicólogo de Los Angeles que escribió "Mis seis convictos"</li>
+                        <br>
+                        <li>-Instructor de Diseño Industrial en la Art Center School
+                            en Hollywood, California</li>
+                        <br>
+                        <li>-Consultor de diseño de Fred Landgraf para Landgraf Helicópter
+                            Co., Los Angeles, California</li>
+                        <br>
+
+                        <li>-Fundador de la compañía Revell Plastics (ahora Revell-Monogram)
+                            con Lou Glaser (1943)</li>
+                        <br>
+                        <li>-Diseñador en la Unidad de Diseño y Desarrollo de la de
+                            la Fuerza Aérea del Ejército de EEUU, Wright Field,
+                            Dayton, Ohio, 1941-1944
+                        </li>
+                        <br>
+                        <li>-Diseñador arquitectónico de Trend Homes, Inc., Los Angeles,
+                            California, 1945-1948</li>
+                        <br>
+                        <li>-Diseño Desarrollador de dispositivos electrónicos para
+                            el Instituto del Parkinson de Miami...</li>
+                    </ul>
+
+                    Entre otras cosas.
+                    <br>
+                    <br>
+                    <h3 style="text-align:center;"> Investigaciones y Diseños </h3> 
+                    <br>
+                    <ul>
+                        <li>-Sistemas para aviones sin ruido o contaminación
+                        </li>
+                        <br>
+
+                        <li>-Un nuevo sistema estructural de alas de avión, patentado
+                            por la Fuerza aérea de Estados Unidos
+                        </li>
+                        <br>
+                        <li>-Control de capa límite y métodos electrodinámicos para
+                            el control de aviones que prescinde de alerones, elevadores,
+                            timones y tapa
+                        </li>
+                        <br>
+                        <li>-Equipo experimental para la ciencia de la conducta, Keller
+                            Breland
+                        </li>
+                        <br>
+                        <li>-Un automóvil de 3 ruedas constituido por sólo 32 partes
+                        </li>
+                        <br>
+
+                        <li>-"The Aluminum Trend House", una casa prefabricada diseñada
+                            y desarrollada para Mike Shore y Earl "Madman" Muntz
+                        </li>
+                        <br>
+                        <li>-Desarrolló varios componentes y sistemas para construcción
+                            arquitectónica
+                        </li>
+                        <br>
+                        <li>-Desarrolló equipamientos desde unidades de rayos-x tridimensionales
+                            a instrumentos quirúrgicos para el campo de la medicina
+                        </li>
+                        <br>
+                        <li>-Diseñó y construyó una amplia gama de estructuras reforzadas
+                            de hormigón</li>
+                    </ul>
+                    Entre otras invenciones e investigaciones
+                    <br>
+                    <br>Actualmente, escribe y presenta conferencias sobre temas que
+                    abarcan desde el diseño holístico de ciudades sostenibles,
+                    hasta eficiencia energética, gestión de recursos naturales
+                    y automatización avanzada, enfocándose en los beneficios que
+                    esto traerá a la sociedad.
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div class="panel" title="Información" id="page_17" data-appbuilder-object="page"
+        style="" data-footer="footer_15">
+
+
+
+            <div class="container" style="width: 100%; height: 100%; position: relative; z-index: 0;"
+            data-appbuilder-object="container">
+
+
+
+
+
+                <div class="text_item" data-appbuilder-object="text" style="padding: 10px; text-align: justify;">
+                    <h4 style="text-align:center;"> ¡Gracias por instalar la App del Proyecto Venus!</h4>
+                    <br>
+                    <p>Mi Nombre es Darwin, Estudiante de Ing. en Sistemas, Activista
+                        del Software Libre y Voluntario del Proyecto Venus. Estoy
+                        empezando en el desarrollo de aplicaciones moviles, Espero
+                        que la información que encuentren sea relevante y extensional
+                        para ustedes. Me gustaria que con vuestra ayuda, a traves
+                        de sugerencias o reporte de errores me colaboren para poder
+                        mejorar cada vez mas, esta aplicación.</p>
+
+
+                    <p>Para ello pueden escribirme a mi correo darwin.vasqz@gmail.com
+                        o enviarme un tweet a @darwin_vasqz</p>
+
+                    <p>Esta aplicación es Software Libre, me pueden pedir el código
+                        fuente o pueden acceder al repositorio publico en github.</p>
+
+                    <p>github.com/darwinv/tvp</p>
+                    <br>
+                    <p>Que tengan una maravillosa vida :)</p>
+                    <br>
+
+                    <i><q>Cada idea revolucionaria — en ciencias, politica, arte, o lo que sea — parece evocar tres etapas de reacción. Estas se pueden resumir con las siguientes frases:
+
+(1) «Es completamente imposible, no me hagas gastar mi tiempo»;
+(2) «Es posible pero no vale la pena hacerlo»;
+(3) «Siempre dije que era una buena idea, desde el principio»</q></i> 
+                    <p style="text-align:right" ;="">Arthur C. Clarke</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel" title="Roxanne Meadows" id="page_6" data-appbuilder-object="page"
+        style="" data-header="header_0" data-footer="footer_6">
+            <div class="container" style="width: 100%; height: 100%; position: relative; z-index: 0;"
+            data-appbuilder-object="container">
+                <img src="images/roxanne.jpg" style="width: 40%; height: 70%;" alt="Title" data-appbuilder-object="image"
+                class="" title="">
+                <div class="text_item" data-appbuilder-object="text" style="width: 58%; float: right;">
+                    <h3>Roxanne Meadows</h3>
+                    <br>La Sra. Roxanne Meadows asistió Moore College of Art y recibió
+                    un BFA de Maryland Institute of Art. Estudió la representación
+                    técnica y arquitectónica y el modelo de decisiones en condiciones
+                    de Jacque Fresco durante años 4. Hoy en día, es un ilustrador
+                    técnico y arquitectónico realizado y bien conocido y maquetista.</div>
+                <div class="text_item" data-appbuilder-object="text" style="margin-top: 10px;"></div>
+                <div class="text_item" data-appbuilder-object="text"></div>
+                <div class="text_item" data-appbuilder-object="text" style="margin-top: 20px; text-align: justify; padding: 10px;">La Sra. Meadows es un ilustradora científica y médico competente.
+                    Ella también tiene una licencia de piloto privado. Desde 1985,
+                    la Sra. Meadows suministra planos arquitectónicos, modelos
+                    y trabajos de diseño de los principales desarrolladores y arquitectos
+                    de todo el país. Fue presidente y fundadora de Architectural
+                    Arts Inc., que continuó este servicio de 1997 a 2008.
+                    <br>
+                    <br>Desde 1975 hasta la actualidad, ha trabajado con el renombrado
+                    futurista Jacque Fresco para desarrollar y promover el Proyecto
+                    Venus.
+
+                    <br>
+                    <br>Roxanne Meadows preparó planos, modelos y representaciones
+                    de diversas ciudades y otras propuestas presentadas por el
+                    Proyecto Venus en los últimos 35 años. Muchos de ellos han
+                    aparecido en numerosos periódicos y revistas, así como en la
+                    televisión, en documentales, películas, sitios web y blogs.</div>
+            </div>
+        </div>
+        <div class="panel" title="Centro de Investigaciones" id="page_7" data-appbuilder-object="page"
+        style="" data-header="header_0" data-footer="footer_7">
+            <div class="container" style="width: 100%; height: 200%; position: relative; z-index: 0;"
+            data-appbuilder-object="container">
+
+                <img src="images/research_center.jpg" style="width: 100%; height: auto;" alt="Title"
+                data-appbuilder-object="image" class="" title="">
+                <div class="text_item" data-appbuilder-object="text" style="text-align: justify; padding: 10px;">
+                    <h3 style="text-align:center;"> Centro de Investigaciones </h3> 
+                    <br>Primera Fase del Proyecto Venus es un centro de diseño de poco
+                    más de veintiún acres en todavía prístina centro-sur de Florida,
+                    donde el futuro está tomando forma. Los edificios reales y
+                    centro de conferencias se complementan con modelos, ilustraciones,
+                    planos, carteles, libros y presentaciones de video. Estos son
+                    los primeros pasos que se han completado para ayudar a visualizar,
+                    sentir y tocar un posible futuro.
+                    <br>
+                    <br>¿Por qué son los primeros edificios diseñados por el Proyecto
+                    Venus en forma de cúpula?. La cúpula requiere la menor cantidad
+                    de material para encerrar un área dada. Ofrece facilidad de
+                    fabricación y la prefabricación. Es la forma de la fuerza máxima
+                    y la estabilidad. Cuando está bien diseñado, la cúpula puede
+                    soportar cargas extremadamente altas de viento y es resistente
+                    a los terremotos, termitas, roedores, y el fuego. Por encima
+                    de todo, está construida de hormigón, que conserva nuestros
+                    bosques. ¿Por qué son los primeros edificios diseñados por
+                    el Proyecto Venus en forma de cúpula?. La cúpula requiere la
+                    menor cantidad de material para encerrar un área dada. Ofrece
+                    facilidad de fabricación y la prefabricación. Es la forma de
+                    la fuerza máxima y la estabilidad. Cuando está bien diseñado,
+                    la cúpula puede soportar cargas extremadamente altas de viento
+                    y es resistente a los terremotos, termitas, roedores, y el
+                    fuego. Por encima de todo, está construida de hormigón, que
+                    conserva nuestros bosques.
+                    <br>
+                    <br>Podemos fabricar muebles de cocina, muebles y una gran cantidad
+                    de su interior como una parte integral de la construcción,
+                    que requiere poco mantenimiento y reparación.
+
+                    <br>
+                    <br>Los edificios se muestran en la forma de las cosas por venir
+                    no sólo la forma de la arquitectura, sino de una forma de vida
+                    que se puede alcanzar ahora. Puede ser limpio, seguro, de alta
+                    tecnología, estéticamente agradable, y sin embargo, en armonía
+                    con la naturaleza.</div>
+
+                <img src="images/guest.jpg" style="width: 100%; height: auto;" alt="Title" data-appbuilder-object="image"
+                class="" title="">
+            </div>
+
+
+        </div>
+        <!---->
+
+        <!---->
+        <header id="header_0" data-appbuilder-object="header">
+            <h1 id="pageTitle" class="">Proyecto Venus</h1>
+        </header>
+
+
+
+
+        <footer id="footer_2" data-appbuilder-object="footer"><a href="#page_1" class="icon left">Previous</a><a href="#home" class="icon home">Home</a>
+            <a href="#page_3" class="icon right">Next</a><a href="#page_2" class="icon home">Home</a>
+        </footer>
+
+
+
+        <div class="panel" title="Tecnologías" id="page_8" data-appbuilder-object="page"
+        style="" data-footer="footer_15">
+            <div class="container" style="width: 100%; height: 100%;" data-appbuilder-object="container">
+                <img src="images/tech1.jpg" style="width: 100%; height: 60%;" alt="Title" data-appbuilder-object="image"
+                class="" title="">
+                <ul class="list" data-appbuilder-object="list" style="">
+                    <li><a href="#page_9">Sistemas Urbanos</a>
+                    </li>
+                    <li><a href="#page_10">Viviendas</a>
+                    </li>
+                    <li><a href="#page_11">Construcción</a>
+                    </li>
+                    <li><a href="#page_12">Espacio</a>
+                    </li>
+                    <li><a href="#page_13">Ciudades en el Mar</a>
+                    </li>
+                    <li><a href="#page_14">Transporte</a>
+                    </li>
+                    <li><a href="#page_16">Energía</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="panel" title="Sistemas Urbanos" id="page_9" data-appbuilder-object="page"
+        style="" data-footer="footer_8" data-header="header_0">
+            <div class="container" style="width: 100%; height: 435%; position: relative; z-index: 0;"
+            data-appbuilder-object="container">
+                <img src="images/tvpcities.jpg" style="width: 100%; height: auto;" alt="Title"
+                data-appbuilder-object="image" class="" title="">
+                <div class="text_item" data-appbuilder-object="text" style="text-align: justify; padding: 10px;">
+                    <br>
+                    <h3 style="text-align:center;">Ciudades y Sistemas Urbanos</h3>
+                    <br>Sería mucho más fácil y requeriría menos energía construir
+                    ciudades nuevas y eficientes que intentar actualizar y solucionar
+                    los problemas de las antiguas. El Proyecto Venus propone una
+                    ciudad de investigación que utilizaría los recursos y técnicas
+                    de construcción más sofisticados disponibles. Su geométricamente
+                    elegante y eficiente disposición circular, estará rodeada y
+                    se incorporaran en el diseño de la ciudad, parques y jardines.
+                    Esta ciudad será diseñada para operar con el gasto mínimo de
+                    energía utilizando la tecnología más limpia disponible, que
+                    a la vez estará en armonía con la naturaleza para obtener el
+                    más alto nivel de vida posible para todos
+                    <br>
+                    <br>Este sistema facilita el transporte eficiente para residentes
+                    de la ciudad, eliminando la necesidad de automóviles. Arreglo
+                    de Ciudad Circular del Proyecto Venus se compone de los siguientes
+                    aspectos:
+                    <br>
+                    <br>
+
+                    <ul>
+                        <li>1) El domo central o centro temático albergará el núcleo
+                            del sistema cibernético, instalaciones educativas,
+                            centros de acceso, comunicaciones, sistemas informáticos
+                            en red, de salud y centros de atención infantil.</li>
+                        <br>
+                        <li>2) Los edificios que rodean la cúpula central proporcionan
+                            a la comunidad centros para actividades culturales
+                            como las artes, teatro, exposiciones, conciertos, centros
+                            de acceso y varias formas de entretenimiento.</li>
+                        <br>
+                        <li>3) Lo siguiente es el diseño y desarrollo complejo para
+                            la ciudad de investigación y planificación. Los centros
+                            de diseño están muy bien cuidados en un entorno natural.</li>
+                        <br>
+                        <li>4) Las facilidades adyacentes a las instalaciones de investigación
+                            serán comedores y otros entretenimientos.</li>
+                        <br>
+                        <li>5) Cada hogar está inmerso en bellos jardines y aislados
+                            los unos de los otros por exuberantes paisajes
+                        </li>
+                        <br>
+                        <li>6)Hay áreas destinadas para fuentes de energía limpias
+                            y renovables, como generadores eólicos, captadores
+                            solares, sistemas de concentración de calor, energía
+                            geotérmica, fotovoltáica y otras.</li>
+                        <br>
+                        <li>7) A continuación se encuentran los cinturones con las
+                            instalaciones de agricultura hidropónica de interior
+                            y de agricultura exterior, que se utilizarán para cultivar
+                            una amplia variedad de plantas orgánicas sin el uso
+                            de pesticidas..</li>
+                        <br>
+                        <li>8)Un canal circular para la irrigación y el filtrado rodea
+                            al cinturón agrícola..
+                        </li>
+                        <br>
+                        <li>9) El perímetro exterior se utiliza para actividades recreativas
+                            como ciclismo, golf, senderismo, etc.
+                        </li>
+                    </ul>
+                    <br>En una economía basada en recursos, todas estas instalaciones
+                    están disponibles para todos sin costo alguno. El único propósito
+                    de esta sofisticada tecnología es liberar a la gente de las
+                    tareas aburridas y monótonas, hacer posible un nivel de vida
+                    mucho más alto y proporcionar más tiempo libre.
+                    <br>
+                    <br>Con una oportunidad para el crecimiento y el rendimiento constante,
+                    las personas podrían tener el tiempo y la libertad para elegir
+                    el estilo de vida que les resulte más satisfactoria. La ciudad
+                    está diseñada para satisfacer las necesidades de todos los
+                    miembros de la sociedad.
+
+                </div>
+            </div>
+            <img src="images/06.jpg" style="width: 100%; height: 50%;" alt="Title" data-appbuilder-object="image"
+            class="" title="city">
+        </div>
+        <div class="panel" title="Viviendas" id="page_10" data-appbuilder-object="page"
+        style="" data-footer="footer_9" data-header="header_0">
+            <div class="container" style="width: 100%; height: 200%;" data-appbuilder-object="container">
+                <img src="images/casa.jpeg" style="width: 49%; height: 24%;" alt="Title" data-appbuilder-object="image"
+                class="" title="">
+                <img src="images/casa1.jpeg" style="width: 49%; height: 24%; float: right;" alt="Title"
+                data-appbuilder-object="image" class="" title="">
+                <img src="images/house.jpg" style="width: 100%; height: 25%;" alt="Title" data-appbuilder-object="image"
+                class="" title="">
+                <div class="text_item" data-appbuilder-object="text" style="text-align: justify; margin-top: 10px; padding: 10px;">
+                    <h3 style="text-align:center;">Viviendas </h3>
+
+                    <br>
+                    <br>El Proyecto Venus recomienda que el estado actual y los objetivos
+                    de la arquitectura pueden redefinir para adaptarse a las necesidades
+                    cambiantes de las personas en esta nueva cultura emergente.
+                    <br>
+                    <br>La arquitectura y las viviendas individuales de las ciudades
+                    del futuro evolucionarán de forma totalmente diferente a las
+                    casas de hoy en día. Con la aplicación inteligente de las tecnologías
+                    humanas, vamos a ser capaces de proporcionar y permitir una
+                    amplia gama de casas individuales únicas. Sus elementos estructurales
+                    serán flexibles y coherentemente dispuestos para servir mejor
+                    a las preferencias individuales. Estas pre-fabricadas, casas
+                    modulares, que incorporan un alto grado de flexibilidad inconcebible
+                    en tiempos pasados, se podrían construir en cualquier lugar
+                    que uno podría imaginar, en medio de los bosques, en la cima
+                    las montañas o en islas remotas.
+                    <br>
+                    <br>Todas estas viviendas pueden ser diseñadas como residencias
+                    independientes con sus propios generadores térmicos y concentradores
+                    de calor. Los conjuntos fotovoltaicos se construirían en la
+                    piel de la construcción y en las propias ventanas.
+                    <br>
+                    <br>Se usarían "Thermopanes" (termopaneles) en las ventanas para
+                    disminuir la cantidad de luz solar mediante patrones variables
+                    de sombreado. Todas estas características podrían ser seleccionadas
+                    por el ocupante para suministrar energía más que suficiente
+                    para operar la casa entera. Las casas podrían ser prefabricadas
+                    con un nuevo tipo de hormigón pretensado y reforzado con un
+                    revestimiento exterior de cerámica flexible, que estaría relativamente
+                    libre de mantenimiento, sería no inflamable, e impermeable
+                    al clima. Su armazón fina puede ser producida masivamente en
+                    cuestión de horas. Con este tipo de construcción, los daños
+                    a causa de terremotos y huracanes serían mínimos.
+                </div>
+            </div>
+        </div>
+
+        <div class="panel" title="Construcción" id="page_11" data-appbuilder-object="page"
+        style="" data-footer="footer_10" data-header="header_0">
+            <div class="container" style="width: 100%; height: 200%;" data-appbuilder-object="container">
+                <img src="images/Center.jpg" style="width: 100%; height: 48%;" alt="Title" data-appbuilder-object="image"
+                class="" title="">
+                <div class="text_item" data-appbuilder-object="text" style="text-align: center; padding: 0px 10px;">
+                    <h3>Construcción</h3>
+                    <br>"Si la tecnología no libera a todas las personas para la consecución
+                    de las aspiraciones más altas en los logros humanos, entonces
+                    todo su potencial técnico no tendrá ningún sentido."
+                    <br>
+                    <br> <em> Jacque Fresco </em> 
+                    <br>
+                    <br>
+                </div>
+                <img src="images/machine.jpg" style="width: 100%; height: auto;" alt="Title" data-appbuilder-object="image"
+                class="" title="">
+                <div class="text_item" data-appbuilder-object="text" style="text-align: justify; padding: 10px;">La máquina en primer plano es una unidad multi-función.
+                    <br>
+                    <br>Aquí, se utiliza para levantar e insertar componentes prefabricados
+                    de vivienda en una estructura de soporte.
+                    <br>
+                    <br>Aunque estas unidades "prefabricadas" serán compuestas de componentes
+                    estándar, tendrán un diseño modular de una gama tan amplia
+                    y diversa como para permitir la máxima expresión individual
+                    en el diseño de interiores y decoración.
+                </div>
+                <img src="images/grua.jpg" style="width: 100%; height: auto; float: right;" alt="Title"
+                data-appbuilder-object="image" class="" title="Grua Automatizada">
+            </div>
+            <div class="text_item" data-appbuilder-object="text" style="padding: 10px; text-align: justify;">
+                <h3 style="text-align:center;"> Grúas Automatizadas</h3> 
+                <br>La construcción de estos complejos industriales y de investigación
+                en la ciudad circular se puede llevar a cabo por equipo robótico
+                que va a recibir instrucciones a través de satélite.
+                <br>
+                <br>Grúas automatizadas viajan a lo largo de la longitud de los edificios
+                la instalación de pisos, ventanas, muros cortina, techos y otros
+                componentes de la tierra para arriba. Estos dispositivos contendrán
+                sensores para minimizar accidentes industriales o colisiones con
+                otros dispositivos o seres vivos.</div>
+            <img src="images/robots.jpg" style="width: 100%; height: 30%;" alt="Title" data-appbuilder-object="image"
+            class="" title="Robots Industriales">
+            <div class="text_item" data-appbuilder-object="text" style="text-align: justify; padding: 10px;">
+                <h3 style="text-align:center;">Robots Industriales </h3> 
+                <br>Estos "robots industriales de múltiple acceso" utilizarán vastos
+                recursos de información, que les permitirán recibir órdenes vía
+                satélite de enlace ascendente o en el lugar.
+                <br>
+                <br>También se pueden diseñar para que puedan tomar las acciones apropiadas
+                en ausencia de directivas humanas mediante la combinación de una
+                serie de sensores y receptores con sofisticadas capacidades de
+                toma de decisión.
+                <br>
+                <br>Ellos serán capaces de manejar una amplia gama de tareas de producción
+                industrial, y serán capaz de mejorar su nivel de servicio y reemplazar
+                las piezas defectuosas o desgastadas.
+                <br>
+                <br>Estos mega-robots se comunicaran entre sí para coordinar la entrega
+                de los materiales necesarios para cada proyecto.</div>
+        </div>
+
+        <div class="panel" title="Ciudades en el Mar" id="page_13" data-appbuilder-object="page"
+        style="" data-footer="footer_12" data-header="header_0">
+            <div class="container" style="width: 100%; height: 350%;" data-appbuilder-object="container">
+                <img src="images/seacitie.jpg" style="width: 100%; height: auto;" alt="Title" data-appbuilder-object="image"
+                class="" title="">
+                <div class="text_item" data-appbuilder-object="text" style="padding: 10px; text-align: justify;">
+                    <h3 style="text-align:center;">Ciudades en el Mar</h3> 
+                    <br>Un sistema global de estas estructuras puede acomodar fácilmente
+                    a millones de personas y aliviar las presiones de la población
+                    con base en tierra. Pueden proveer de información a los habitantes
+                    y servir como acuarios naturales sin tener que encerrar vida
+                    marina artificialmente.
+
+                    <br>
+                    <br>Muchas de estas ciudades pueden servir como universidades oceanográficas
+                    que mantienen el equilibrio ecológico de los sistemas marinos.
+                    Otras ciudades oceánicas mantendrán granjas marinas que cultivarán
+                    muchas formas de vida marina. También podrían utilizarse como
+                    una nueva herramienta para extraer aquellos recursos del océano
+                    que se encuentran relativamente sin explotar, y hacerlo sin
+                    perturbar su ecología. Mientras, otras pueden monitorear y
+                    conservar el equilibrio ambiental y recuperar los materiales
+                    radiactivos peligrosos y otros contaminantes que han sido vertidos
+                    al mar.
+                </div>
+                <img src="images/seacities1.jpg" style="width: 45%; height: auto; float: left; margin: 5px;"
+                alt="Title" data-appbuilder-object="image" class="" title="">
+                <div class="text_item" data-appbuilder-object="text" style="padding: 10px; text-align: justify;">
+                    <h3 style="text-align:center;">Viviendas en alta mar</h3>
+                    <br>Edificios de apartamentos de alta mar de hormigón, acero, vidrio,
+                    titanio, y una amplia variedad de nuevos materiales sintéticos
+                    se podrían construir para aliviar la presión de la población
+                    en zonas como Hong Kong, Tokio, Los Angeles y Nueva York.Los
+                    materiales utilizados en tales proyectos serían diseñados para
+                    resistir los efectos corrosivos del riguroso ambiente oceánico.
+                    <br>
+                    <br>
+                    <h3 style="text-align:center;">Maricultura y Acuicultura </h3>
+                    <br>Tales sistemas se utilizarían para cultivar y criar peces y
+                    otras formas de vida marina para ayudar a satisfacer las necesidades
+                    nutricionales de la población mundial. Capaces de cultivar
+                    una gran variedad de vida marina, estas estructuras estarían
+                    equipados para permitir el libre flujo de agua a través del
+                    sistema. Están diseñadas para ser una parte integral y no contaminante
+                    del medioambiente marino.</div>
+                <img src="images/maricultura.jpg" style="width: 100%; height: auto;" alt="Title"
+                data-appbuilder-object="image" class="" title="maricultura y acuicultura">
+            </div>
+        </div>
+        <div class="panel" title="Espacio" id="page_12" data-appbuilder-object="page" style=""
+        data-footer="footer_11" data-header="header_0">
+            <div class="container" style="width: 100%; height: 100%;" data-appbuilder-object="container">
+                <img src="images/space1.jpg" style="width: 100%; height: auto;" alt="Title" data-appbuilder-object="image"
+                class="" title="Espacio">
+                <div class="text_item" data-appbuilder-object="text" style="padding: 10px; text-align: justify;">
+                    <h3 style="text-align:center;">Espacio</h3> 
+                    <br>Las estaciones espaciales proporcionan las ventajas de un ambiente
+                    de investigación sin gravedad. Pueden ser completamente automatizadas
+                    y autónomas para permitir el mantenimiento y la autoreparación
+                    sin intervención humana. Estas estaciones espaciales serían
+                    capaces de monitorear los recursos de la Tierra, así como también
+                    facilitar una investigación mayor en los campos de la meteorología
+                    y la astronomía, trabajo que generalmente es difícil en la
+                    Tierra debido a la interferencia atmosférica.
+                    <br>
+                    <br>Muchos otros experimentos pueden llevarse a cabo en un ambiente
+                    libre de gravedad, sobre todo en las áreas de la medicina,
+                    la química y la metalurgia. Además, estas estaciones espaciales
+                    servirían de nodos en un sistema de telecomunicaciones en todo
+                    el mundo, proporcionando la información puesta al día sobre
+                    los ecosistemas de la Tierra, la posición de los buques y aviones
+                    de pasajeros, y otra información pertinente a los habitantes
+                    de un mundo cibernetizado.</div>
+            </div>
+        </div>
+        <div class="panel" title="Transporte" id="page_14" data-appbuilder-object="page"
+        style="" data-footer="footer_13" data-header="header_0">
+            <div class="container" style="width: 100%;" data-appbuilder-object="container">
+                <div class="text_item" data-appbuilder-object="text" style="padding: 10px; text-align: justify;">
+                    <h2 style="text-align:center;"> Transporte
+ </h2> 
+                    <h3 style="text-align:center;"> Trenes de levitación magnética
+ </h3> 
+                    <br>Diversos segmentos de los compartimentos de pasajeros de estos
+                    trenes de alta velocidad pueden ser desacoplados mientras el
+                    tren pasa por la estación.
+                    <br>Estas secciones removibles pueden luego llevar pasajeros a
+                    sus destinos locales mientras que otros compartimentos son
+                    acoplados en su lugar. Este método permite que el cuerpo principal
+                    del tren se mantenga en movimiento, conservando así energía.
+                    Además, los compartimentos removibles multi-funcionales podrían
+                    ser especialmente equipados para cubrir la mayoría de las necesidades
+                    de transporte.</div>
+                <img src="images/tren.jpeg" style="width: 100%; height: auto;" alt="Title" data-appbuilder-object="image"
+                class="" title="tren">
+                <div class="text_item" data-appbuilder-object="text" style="padding: 10px; text-align: justify;">
+                    <h3 style="text-align:center;">Aeronaves</h3>
+                    <br>Ya que los aviones militares serán innecesarios en el futuro,
+                    el énfasis puede ser desplazado hacia el desarrollo de vehículos
+                    médicos, de emergencia, de servicios y de transporte. Aquí
+                    hay un ejemplo de una aeronave DAV (Despegue y Aterrizaje Verticales)
+                    con tres turbinas sincrónicas que permiten una maniobrabilidad
+                    excepcional. Estas aeronaves de configuración delta pueden
+                    ser controladas por medios electrodinámicos eliminando la necesidad
+                    de alerones, elevadores, timones, spoilers, flaps o cualquier
+                    otro control mecánico. Además de proveer mejor maniobrabilidad
+                    y cualidades aerodinámicas, esta tecnología innovadora también
+                    servirá como un sistema anticongelante. En el caso de un aterrizaje
+                    de emergencia el combustible será eyectado para prevenir incendios.</div>
+                <img src="images/aeronave.jpg" style="width: 100%; height: auto;" alt="Title" data-appbuilder-object="image"
+                class="" title="">
+                <div class="text_item" data-appbuilder-object="text" style="padding: 10px; text-align: justify;">
+                    <h3 style="text-align:center;"> Automóviles </h3> 
+                    <br>Automóviles aerodinámicos proporcionarán transporte de larga
+                    distancia de alta velocidad, seguro y energéticamente eficiente.
+                    Algunos vehículos tendrán ruedas, mientras que al final, otros
+                    estarán equipados con métodos de levitación magnética o flotación
+                    aérea. La mayoría de los vehículos estarán equipados con tecnología
+                    de reconocimiento de voz que les permitirá a los pasajeros
+                    programar su destino por comandos de voz.
+                    <br>
+                    <br>Sistemas de autocontrol le dirán a los vehículos cuando se
+                    requiere el servicio, y serán capaces de transportarse así
+                    mismos a las instalaciones de servicio y mantenimiento. El
+                    uso energía eléctrica limpia, no contaminante permite el funcionamiento
+                    del vehículo en silencio, mientras que los dispositivos de
+                    sensores de proximidad vinculados a la velocidad automatizada
+                    y al rompimiento de sistemas mejoran la seguridad al evitar
+                    que los vehículos colisionen. Como medida de seguridad adicional,
+                    todo el interior estará equipado con sistemas de diseño ergonómico
+                    de airbag.</div>
+                <img src="images/autos.jpeg" style="width: 100%; height: auto;" alt="Title" data-appbuilder-object="image"
+                class="" title="automoviles">
+            </div>
+        </div>
+        <div class="panel" title="Energia" id="page_16" data-appbuilder-object="page" style=""
+        data-footer="footer_14" data-header="header_0">
+            <div class="container" style="width: 100%; height: 440%;" data-appbuilder-object="container">
+                <img src="images/Energy.png" style="width: 98%; height: auto;" alt="Title" data-appbuilder-object="image"
+                class="" title="Energia">
+                <div class="text_item" data-appbuilder-object="text" style="margin: 8px; padding: 10px; text-align: justify;">
+                    <h2 style="text-align:center;"> Energía
+ </h2> Ninguno de estos mega-proyectos será emprendido sin un estudio
+                    exhaustivo de las retroacciones positivas y negativas implicadas.</div>
+                <div class="text_item" data-appbuilder-object="text" style="text-align: center;">
+                    <h3> Energía Solar </h3>
+                    <br>
+                </div>
+                <img src="images/solarenergy.jpg" style="width: 98%; height: auto;" alt="Title"
+                data-appbuilder-object="image" class="" title="Energia Solar">
+                <div class="text_item" data-appbuilder-object="text" style="padding: 10px; text-align: justify;">
+                    <br>La energía solar tiene un tremendo potencial, desde paneles
+                    fotovoltaicos que almacenan energía en baterías para uso privado,
+                    hasta grandes plantas solares tanto terrestres como marítimas.
+                    La radiación solar que anualmente alcanza la superficie de
+                    la tierra es 10.000 veces mayor que el gasto energético mundial.
+                    Nuevas tecnologías se incorporan constantemente para aprovechar
+                    este potencial.</div>
+                <div class="text_item" data-appbuilder-object="text" style="text-align: center; margin: 8px;">
+                    <h3>Energía Geotermica</h3>
+                </div>
+                <img src="images/geothermal.jpg" style="width: 97%; height: auto;" alt="Title"
+                data-appbuilder-object="image" class="" title="geotermica">
+                <div class="text_item" data-appbuilder-object="text" style="padding: 10px; text-align: justify;">
+                    <br>A medida que la sofisticación en las tecnologías de conversión
+                    aumenten su viabilidad, la energía geotérmica asumirá un rol
+                    más prominente. Fácilmente disponible en diversas regiones
+                    geográficas alrededor del mundo, tanto en la tierra como bajo
+                    el mar, esta fuente de energía por sí sola podría proporcionar
+                    suficiente energía limpia por los próximos mil años.
+                </div>
+                <div class="text_item" data-appbuilder-object="text" style="text-align: center; margin: 7px;">
+                    <h3> Turbinas Submarinas </h3>
+                </div>
+                <img src="images/turbina.png" style="width: 97%; height: auto;" alt="Title" data-appbuilder-object="image"
+                class="" title="">
+                <div class="text_item" data-appbuilder-object="text" style="text-align: justify; padding: 10px;">
+                    <br>Estas estructuras submarinas están diseñadas para convertir
+                    parte del flujo de la corriente del Golfo a través de turbinas
+                    para generar energía eléctrica limpia. Estas turbinas de rotación
+                    lenta tendrían un separador centrífugo y deflectores para evitar
+                    dañar a la vida marina.</div>
+                <div class="text_item" data-appbuilder-object="text" style="text-align: center; margin: 4px;">
+                    <h3>La Represa del Estrecho de Bering</h3>
+                </div>
+                <img src="images/presa.jpg" style="width: 100%; height: auto;" alt="Title" data-appbuilder-object="image"
+                class="" title="">
+                <div class="text_item" data-appbuilder-object="text" style="padding: 10px; text-align: justify;">
+                    <br>Un puente terrestre o un túnel podrían ser construidos a través
+                    del Estrecho de Bering. La función principal de este tramo
+                    sería generar energía eléctrica y albergar instalaciones para
+                    recolectar y procesar productos marinos. Por debajo y por sobre
+                    la superficie del océano habría túneles para el transporte
+                    tanto de pasajeros como de carga. Esta estructura no sólo podría
+                    proporcionar un enlace físico entre Asia y Norteamérica, sino
+                    que además podría servir como una vía para el intercambio social
+                    y cultural. Este puente terrestre quizás serviría como base
+                    para el desarrollo de energía limpia de fusión. También podrían
+                    incorporarse tuberías para conducir agua fresca desde icebergs
+                    derretidos a otras partes del mundo.</div>
+            </div>
+        </div>
+        <div class="panel" title="Documentales" id="page_15" data-appbuilder-object="page"
+        style="" data-footer="footer_15">
+            <div class="container" style="width: 100%; height: 230%;" data-appbuilder-object="container">
+                <div class="text_item" data-appbuilder-object="text" style="text-align: center;">
+                    <h3> Paraíso o Perdición</h3> 
+                    <br>
+
+
+                </div>
+
+                <img src="images/paraiso.jpg" style="width: 100%; height: auto;" alt="Title" data-appbuilder-object="image"
+                class="" title="Paraiso o Perdicion">
+                <div class="text_item" data-appbuilder-object="text" style="text-align: center;">
+                    <h4> Ver en Youtube:</h4>
+
+                    <a href="https://www.youtube.com/watch?v=35OU1p95MUs" target="_blank"> Opción Subtitulado</a>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=35OU1p95MUs" target="_blank"> Opción Doblado al español</a> 
+                    <br>
+                    <br>
+
+                    <h3> Future By Design </h3>
+                </div>
+                <img src="images/design.jpg" style="width: 98%; height: auto;" alt="Title" data-appbuilder-object="image"
+                class="" title="Future By Design">
+                <div class="text_item" data-appbuilder-object="text" style="text-align: center;">
+                    <h4> Ver en Youtube:</h4>
+
+                    <a href="https://www.youtube.com/watch?v=XYYA0PcAm2w" target="_blank"> Opción Subtitulado</a>
+                    <br>
+                    <br>
+
+                    <h3>Zeitgeist Addendum </h3>
+                </div>
+                <img src="images/addendum.jpg" style="width: 100%; height: auto;" alt="Title" data-appbuilder-object="image"
+                class="" title="Zeitgeist Addendum">
+                <div class="text_item" data-appbuilder-object="text" style="text-align: center;">
+                    <h4> Ver en Youtube </h4>
+
+                    <a href="https://www.youtube.com/watch?v=cJyKrK90co0" target="_blank"> Opción Subtitulado</a>
+
+                    <br>
+
+                    <a href="https://www.youtube.com/watch?v=ekyI3Yh0rfs" target="_blank"> Opción Doblado al español</a>
+                    <br>
+                    <br>
+
+                    <h3> Zeitgeist Moving Forward </h3>
+                </div>
+                <img src="images/zmf.jpg" style="width: 100%; height: auto;" alt="Title" data-appbuilder-object="image"
+                class="" title="Moving Forward">
+                <div class="text_item" data-appbuilder-object="text" style="text-align: center;">
+                    <h4> Ver en Youtube </h4>
+
+                    <a href="https://www.youtube.com/watch?v=YewGVEQb9LU" target="_blank"> Opción Subtitulado</a>
+
+                    <br>
+
+                    <a href="https://www.youtube.com/watch?v=HzwCzbmDjLA" target="_blank"> Opción Doblado al español</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="panel" title="Redes Sociales" id="page_18" data-appbuilder-object="page"
+        style="" data-footer="footer_15">
+            <div class="container" style="width: 100%; height: 200%;" data-appbuilder-object="container">
+                <div class="text_item" data-appbuilder-object="text" style="">
+                    <h2 style="text-align:center;"> FACEBOOK </h2>
+                </div>
+                <div class="text_item" data-appbuilder-object="text" style="padding: 5px; text-align: center;">
+                    <a title="The Venus Project" href="https://www.facebook.com/TheVenusProjectGlobal?fref=ts">
+                        <img src="images/facebookglobal.jpg" width="90%" height="7%">
+                    </a>
+                </div>
+                <div class="text_item" data-appbuilder-object="text" style="padding: 5px; text-align: center;">
+                    <a title="El Proyecto Venus" href="https://www.facebook.com/elproyectovenus?fref=ts">
+                        <img src="images/facebookspanish.jpg" width="90%" height="10%">
+                    </a>
+                </div>
+                <div class="text_item" data-appbuilder-object="text" style="padding: 5px; text-align: center;">
+                    <a title="Grupo de dudas del Proyecto Venus en español" href="https://www.facebook.com/groups/dudastvphispano/?fref=ts">
+                        <img src="images/facebookdudas.jpg" width="90%" height="8%">
+                    </a>
+                </div>
+                <div class="text_item" data-appbuilder-object="text" style="padding: 5px; text-align: center;">
+                    <a title="Grupo Activista de España" href="https://www.facebook.com/groups/tvpactivism.spain/?fref=ts">
+                        <img src="images/fbactivismoespana.jpg" width="90%" height="10%">
+                    </a>
+                </div>
+                <div class="text_item" data-appbuilder-object="text" style="padding: 5px; text-align: center;">
+                    <a title="Grupo Activista de Venezuela" href="https://www.facebook.com/groups/TVP.Venezuela/?fref=ts">
+                        <img src="images/fbactivismovzla.jpg" width="90%" height="10%">
+                    </a>
+                </div>
+                <div class="text_item" data-appbuilder-object="text" style="padding: 5px; text-align: center;">
+                    <a title="Grupo Activista de Chile" href="https://www.facebook.com/groups/254385514607739/?fref=ts">
+                        <img src="images/fbactivismochile.jpg" width="90%" height="10%">
+                    </a>
+                </div>
+                <div class="text_item" data-appbuilder-object="text" style="padding: 5px; text-align: center;">
+                    <a title="Grupo Activista de Argentina" href="https://www.facebook.com/groups/TVP.Argentina/?fref=ts">
+                        <img src="images/fbactivismoargentina.jpg" width="90%" height="10%">
+                    </a>
+                </div>
+                <div class="text_item" data-appbuilder-object="text">
+                    <h2 style="text-align:center;"> Twitter </h2>
+
+                </div>
+                <div class="text_item" data-appbuilder-object="text" style="padding: 5px; text-align: center;">
+                    <a title="Twitter Oficial" href="https://twitter.com/TheVenusProject">
+                        <img src="images/twitteringles.jpg" width="90%" height="5%">
+                    </a>
+                </div>
+                <div class="text_item" data-appbuilder-object="text" style="padding: 5px; text-align: center;">
+                    <a title="Twitter espanol" href="https://www.twitter.com/elproyectovenus">
+                        <img src="images/twitterespanol.jpg" width="90%" height="5%">
+                    </a>
+                </div>
+            </div>
+            <div class="container" style="width: 100%; height: 100%;" data-appbuilder-object="container">
+                <div class="text_item" data-appbuilder-object="text" style="padding: 5px; text-align: center;">
+                    <a title="Twitter españa" href="https://twitter.com/TVPA_Spain">
+                        <img src="images/twitterespana.jpg" width="90%" height="9%">
+                    </a>
+                </div>
+                <div class="text_item" data-appbuilder-object="text" style="padding: 5px; text-align: center;">
+                    <a title="Twitter Venezuela" href="https://twitter.com/PVenusVenezuela">
+                        <img src="images/twittervzla.jpg" width="90%" height="9%">
+                    </a>
+                </div>
+                <div class="text_item" data-appbuilder-object="text" style="padding: 5px; text-align: center;">
+                    <a title="Twitter Chile" href="https://twitter.com/PVenusChile">
+                        <img src="images/twitterchile.jpg" width="90%" height="9%">
+                    </a>
+                </div>
+                <div class="text_item" data-appbuilder-object="text">
+                    <h2 style="text-align:center;"> Google+ </h2>
+                </div>
+                <div class="text_item" data-appbuilder-object="text" style="padding: 5px; text-align: center;">
+                    <a title="Pagina Oficial de Google+" href="https://plus.google.com/u/0/+thevenusproject/posts">
+                        <img src="images/googleoficial.jpg" width="90%" height="10%">
+                    </a>
+                </div>
+                <div class="text_item" data-appbuilder-object="text" style="padding: 5px; text-align: center;">
+                    <a title="Comunidad Hispanohablante" href="https://plus.google.com/communities/116560370546043557754">
+                        <img src="images/googlehispano.jpg" width="90%" height="10%">
+                    </a>
+                </div>
+                <div class="text_item" data-appbuilder-object="text">
+                    <h2 style="text-align:center;"> Youtube </h2>
+                </div>
+                <div class="text_item" data-appbuilder-object="text" style="padding: 5px; text-align: center;">
+                    <a title="Canal oficial Ingles" href="https://www.youtube.com/user/thevenusprojectmedia"
+                    target="_blank">
+                        <img src="images/ytubeingles.jpg" width="90%" height="10%">
+                    </a>
+                </div>
+                <div class="text_item" data-appbuilder-object="text" style="padding: 5px; text-align: center;">
+                    <a title="Canal educativo Espanol
+" href="https://www.youtube.com/user/pdcdelproyectovenus" target="_blank">
+                        <img src="images/ytubehispano.jpg" width="90%" height="10%">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="navbar" class="footer"> <a href="#home" class="icon home">Home</a>
+    </div>
+
+
+
+
+
+    <header id="header_0" data-appbuilder-object="header">
+        <h1 id="pageTitle" class="">Proyecto Venus</h1>
+    </header>
+
+
+    <footer id="footer_1" data-appbuilder-object="footer"><a href="#page_1" class="icon left">Anterior</a><a href="#home" class="icon home">Inicio</a>
+        <a href="#page_3" class="icon right">Siguiente</a>
+    </footer>
+
+    <footer id="footer_3" data-appbuilder-object="footer"><a href="#page_2" class="icon left">Anterior</a><a href="#home" class="icon home">Inicio</a>
+        <a href="#page_4" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_4" data-appbuilder-object="footer"><a href="#page_3" class="icon left">Anterior</a><a href="#home" class="icon home">Inicio</a>
+        <a href="#page_5" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_5" data-appbuilder-object="footer"><a href="#page_4" class="icon left">Anterior</a><a href="#home" class="icon home">Inicio</a>
+        <a href="#page_6" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_6" data-appbuilder-object="footer"><a href="#page_5" class="icon left">Anterior</a><a href="#home" class="icon home">Inicio</a>
+        <a href="#page_7" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_7" data-appbuilder-object="footer"><a href="#page_6" class="icon left">Anterior</a><a href="#home" class="icon home">Inicio </a>
+        <a href="#page_8" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_8" data-appbuilder-object="footer"><a href="#page_8" class="icon left">Anterior</a><a href="#home" class="icon home">Inicio</a>
+        <a href="#page_10" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_9" data-appbuilder-object="footer"><a href="#page_9" class="icon left">Anterior</a><a href="#home" class="icon home">Inicio</a>
+        <a href="#page_11" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_10" data-appbuilder-object="footer"><a href="#page_10" class="icon left">Anterior</a><a href="#home" class="icon home">Inicio</a>
+        <a href="#page_12" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_11" data-appbuilder-object="footer"><a href="#page_11" class="icon left">Anterior</a><a href="#home" class="icon home">Inicio</a>
+        <a href="#page_13" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_12" data-appbuilder-object="footer"><a href="#page_12" class="icon left">Anterior</a><a href="#home" class="icon home">Inicio</a>
+        <a href="#page_14" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_13" data-appbuilder-object="footer"><a href="#page_13" class="icon left">Anterior</a><a href="#home" class="icon home">Inicio</a>
+        <a href="#page_16" class="icon right">Siguiente</a>
+    </footer>
+    <footer id="footer_14" data-appbuilder-object="footer"><a href="#page_14" class="icon left">Anterior</a><a href="#home" class="icon home">Home</a>
+    </footer>
+    <footer id="footer_15" data-appbuilder-object="footer"><a href="#home" class="icon home">Home</a>
+    </footer>
+    <footer id="footer_16" data-appbuilder-object="footer"><a href="#page_17" class="icon question">Info</a>
+    </footer>
+    <footer id="footer_17" data-appbuilder-object="footer"> <a href="#page_0" class="icon home">Home</a> 
+    </footer>
+</div>
+
+
+
+
+
+</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               

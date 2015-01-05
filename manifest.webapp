@@ -1,0 +1,11 @@
+{
+  "name": "El Proyecto Venus",
+  "launch_path": "/index.html",
+  "description": "Mas alla de la Politica, Pobreza y Guerra.",
+  "icons": {
+     "128": "/mozilla-icon.png"
+  },
+  "developer": {
+    "name": "Darwin Vasquez"
+  }
+}
